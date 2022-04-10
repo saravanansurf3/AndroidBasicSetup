@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/nav_menu_selector.xml" value="0.28125" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_product_detail.xml" value="0.15990938932999318" />
+        <entry key="app/src/main/res/layout/fragment_cart.xml" value="0.21098022460937493" />
+        <entry key="app/src/main/res/layout/fragment_fav.xml" value="0.23505434782608695" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.23505434782608695" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.23505434782608695" />
+        <entry key="app/src/main/res/layout/fragment_recents.xml" value="0.23505434782608695" />
+        <entry key="app/src/main/res/menu/nav_menu.xml" value="0.26510416666666664" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
