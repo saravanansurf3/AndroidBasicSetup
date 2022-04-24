@@ -1,10 +1,13 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
 }
 
 android {
-    compileSdk 32
+    compileSdk 31
 
     defaultConfig {
         applicationId "com.sara.waie.androidbasicsetup"
@@ -29,18 +32,40 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures{
+        viewBinding true
+        dataBinding true
+    }
 }
 
 dependencies {
-
+    def paging_version = "3.1.1"
+    def lifecycle_version = "2.5.0-alpha06"
     implementation "androidx.core:core-ktx:$androidxCore"
     implementation "androidx.appcompat:appcompat:$androidxAppcompact"
 
-    implementation "androidx.navigation:navigation-fragment-ktx:$navVersion"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+//    implementation "androidx.lifecycle::lifecycle-viewmodel-compose:$lifecycle_version"
+//    implementation "androidx.fragment:fragment-ktx:$lifecycle_version"
+
+    implementation "androidx.navigation:navigation-fragment-ktx:2.4.2"
     implementation "androidx.navigation:navigation-ui-ktx:$navVersion"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2"
+
+    //hilt
+    implementation "com.google.dagger:hilt-android:2.40"
+    kapt "com.google.dagger:hilt-android-compiler:2.40"
+
+
+
+    implementation "androidx.paging:paging-runtime:$paging_version"
 
     testImplementation "junit:junit:$junit4"
     androidTestImplementation "androidx.test.ext:junit:$androidxJunit"
