@@ -8,7 +8,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.HomeFragment">
+        tools:context=".ui.fragments.HomeFragment">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/search_view"
@@ -42,9 +42,11 @@
             app:layout_constraintVertical_bias="1.0">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_home_search"
+                android:id="@+id/rv_home"
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                />
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
         <LinearLayout

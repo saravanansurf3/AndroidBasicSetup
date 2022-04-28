@@ -8,9 +8,13 @@
         <entry key="app/src/main/res/layout/activity_product_detail.xml" value="0.15990938932999318" />
         <entry key="app/src/main/res/layout/fragment_cart.xml" value="0.21098022460937493" />
         <entry key="app/src/main/res/layout/fragment_fav.xml" value="0.23505434782608695" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.23505434782608695" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.23505434782608695" />
         <entry key="app/src/main/res/layout/fragment_recents.xml" value="0.23505434782608695" />
+        <entry key="app/src/main/res/layout/rv_home_popularsale_item.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/rv_home_salestoday_item.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/rv_home_suggestion_item.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/rv_horizontal_container.xml" value="0.1" />
         <entry key="app/src/main/res/menu/nav_menu.xml" value="0.26510416666666664" />
       </map>
     </option>

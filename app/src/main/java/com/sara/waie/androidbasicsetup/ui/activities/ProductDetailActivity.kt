@@ -1,12 +1,12 @@
-package com.sara.waie.androidbasicsetup.ui
+package com.sara.waie.androidbasicsetup.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.sara.waie.androidbasicsetup.R
 
-class PaymentActivity : AppCompatActivity() {
+class ProductDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_payment)
+        setContentView(R.layout.activity_product_detail)
     }
 }

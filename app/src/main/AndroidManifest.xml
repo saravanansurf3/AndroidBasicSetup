@@ -11,16 +11,16 @@
         android:name=".Myapp"
         android:theme="@style/Theme.AndroidBasicSetup">
         <activity
-            android:name=".ui.PaymentActivity"
+            android:name=".ui.activities.PaymentActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.CheckoutActivity"
+            android:name=".ui.activities.CheckoutActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.ProductDetailActivity"
+            android:name=".ui.activities.ProductDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

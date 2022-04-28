@@ -1,4 +1,4 @@
-package com.sara.waie.androidbasicsetup.ui
+package com.sara.waie.androidbasicsetup.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

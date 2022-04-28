@@ -1,4 +1,4 @@
-package com.sara.waie.androidbasicsetup.ui
+package com.sara.waie.androidbasicsetup.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

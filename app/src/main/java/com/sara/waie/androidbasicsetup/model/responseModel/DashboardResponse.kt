@@ -13,7 +13,11 @@ data class DashboardResponse(val baseResponse: BaseResponse,
 
 data class DashboardResponseData(
     @SerializedName("todaySale")
-val todaySales: ArrayList<Post>
+val todaySales: ArrayList<Post>,
+    @SerializedName("PopularSale")
+    val popularSale: ArrayList<Post>,
+    @SerializedName("suggestion")
+    val suggestion: ArrayList<Post>
 ){
 
 
