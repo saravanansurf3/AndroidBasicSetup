@@ -8,9 +8,6 @@ data class DashboardResponse(val baseResponse: BaseResponse,
 
 }
 
-
-
-
 data class DashboardResponseData(
     @SerializedName("todaySale")
 val todaySales: ArrayList<Post>,
