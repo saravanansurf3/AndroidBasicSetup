@@ -1,7 +1,9 @@
 package com.sara.waie.androidbasicsetup.di
 
+import androidx.paging.ExperimentalPagingApi
 import com.sara.waie.androidbasicsetup.network.Webservice
-import com.sara.waie.androidbasicsetup.repository.AppRepository
+import com.sara.waie.androidbasicsetup.data.AppRepository
+import com.sara.waie.androidbasicsetup.data.localsource.MyDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -14,55 +16,18 @@ import java.util.concurrent.TimeUnit
 import javax.inject.Named
 import javax.inject.Singleton
 
+@ExperimentalPagingApi
 @Module
 @InstallIn(SingletonComponent::class)
-class AppModule {
+object AppModule {
+
 
     @Provides
     @Singleton
-    fun provideLoggingInterceptor(): HttpLoggingInterceptor {
-        return HttpLoggingInterceptor().apply {
-            level = HttpLoggingInterceptor.Level.BODY
-        }
+    fun providesAppRepository(webservice: Webservice,database: MyDatabase):AppRepository{
+        return AppRepository(webservice,database)
     }
 
 
-
-    @Provides
-    @Singleton
-    fun provideOkHttp(
-        loggingInterceptor123: HttpLoggingInterceptor,
-    ): okhttp3.Call.Factory  {
-        return OkHttpClient.Builder()
-            .addInterceptor(loggingInterceptor123)
-            .callTimeout(600, TimeUnit.SECONDS)
-            .readTimeout(600, TimeUnit.SECONDS)
-            .connectTimeout(10000, TimeUnit.SECONDS)
-            .build()
-    }
-
-    @Provides
-    @Singleton
-    fun provideWebService(
-        callFactory: okhttp3.Call.Factory
-    ): Webservice = Retrofit.Builder()
-        .baseUrl("https://d1269b4fac.to.intercept.rest")
-        .callFactory(callFactory)
-        .addConverterFactory(GsonConverterFactory.create())
-        .build()
-        .create(Webservice::class.java)
-
-    @Provides
-    @Singleton
-    fun providesAppRepository(webservice: Webservice):AppRepository{
-        return AppRepository(webservice)
-    }
-
-    @Provides
-    @Singleton
-    @Named("auth_token")
-    fun providesAuthToken():String{
-        return "Token 9c8b06d329136da358c2d00e76946b0111ce2c48"
-    }
 }
 

@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.paging.ExperimentalPagingApi
 import com.sara.waie.androidbasicsetup.R
 import com.sara.waie.androidbasicsetup.databinding.FragmentRecentsBinding
 import com.sara.waie.androidbasicsetup.ui.adapters.RecentOrderHistoryPagingAdapter
@@ -20,6 +21,7 @@ import kotlinx.coroutines.launch
  * Use the [RecentsFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
+@ExperimentalPagingApi
 class RecentsFragment : Fragment() {
     private lateinit var binding: FragmentRecentsBinding
     private lateinit var adapter:RecentOrderHistoryPagingAdapter

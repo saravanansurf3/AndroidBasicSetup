@@ -1,10 +1,8 @@
-package com.sara.waie.androidbasicsetup.repository.datasource
+package com.sara.waie.androidbasicsetup.data.networksource
 
-import androidx.paging.PagingData
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.sara.waie.androidbasicsetup.model.Order
-import com.sara.waie.androidbasicsetup.model.responseModel.RecentHistoryResponse
 import com.sara.waie.androidbasicsetup.network.Webservice
 import retrofit2.HttpException
 import java.io.IOException

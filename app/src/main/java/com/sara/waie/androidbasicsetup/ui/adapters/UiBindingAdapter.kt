@@ -17,7 +17,7 @@ object UiBindingAdapter {
 
     @BindingAdapter("imageUrl")
     @JvmStatic
-    fun loadImageUrl(view: AppCompatImageView,imageUrl:String){
+    fun loadImageUrl(view: AppCompatImageView,imageUrl:String?){
         imageUrl?.let {
             Glide
                 .with(view.context)
@@ -31,7 +31,7 @@ object UiBindingAdapter {
 
     @BindingAdapter("lable","lableValue")
     @JvmStatic
-    fun updateLableValue(view: AppCompatTextView,lable:String,lableValue:String){
+    fun updateLableValue(view: AppCompatTextView,lable:String?,lableValue:String?){
         try {
             val content= lable+" : "+lableValue.toString()
             view.text=content

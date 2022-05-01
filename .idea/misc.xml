@@ -15,7 +15,8 @@
         <entry key="app/src/main/res/layout/rv_home_salestoday_item.xml" value="0.1" />
         <entry key="app/src/main/res/layout/rv_home_suggestion_item.xml" value="0.1" />
         <entry key="app/src/main/res/layout/rv_horizontal_container.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/rv_order_history_item.xml" value="0.4305177111716621" />
+        <entry key="app/src/main/res/layout/rv_myfav_item.xml" value="0.12892603850050657" />
+        <entry key="app/src/main/res/layout/rv_order_history_item.xml" value="0.23440860215053763" />
         <entry key="app/src/main/res/menu/nav_menu.xml" value="0.26510416666666664" />
       </map>
     </option>

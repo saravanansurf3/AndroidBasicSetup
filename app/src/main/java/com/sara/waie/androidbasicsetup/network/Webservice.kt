@@ -2,6 +2,7 @@ package com.sara.waie.androidbasicsetup.network
 
 import com.sara.waie.androidbasicsetup.model.Post
 import com.sara.waie.androidbasicsetup.model.responseModel.DashboardResponse
+import com.sara.waie.androidbasicsetup.model.responseModel.MyFavPostListResponse
 import com.sara.waie.androidbasicsetup.model.responseModel.RecentHistoryResponse
 import retrofit2.http.GET
 import retrofit2.http.Header
@@ -15,5 +16,8 @@ interface Webservice {
 
     @GET("/recents/")
     suspend fun getRecentOrderHistory(@Query("page") page:Int):RecentHistoryResponse
+
+    @GET("/myfav/")
+    suspend fun getMyFavPost(@Query("page") page: Int): MyFavPostListResponse
 
 }
